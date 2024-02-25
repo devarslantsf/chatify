@@ -68,6 +68,14 @@
                       <input type="submit" class="app-btn a-btn-success update" value="Save Changes" />
                   </div>
               </form>
+              <p class="divider"></p>
+              <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+                  <a class="app-btn a-btn-danger cancel" href="{{route('logout')}}"
+                     onclick="event.preventDefault(); this.closest('form').submit();">
+                      <i class="fas fa-sign-out-alt"></i> {{ __('Log Out') }}
+                  </a>
+              </form>
           </div>
       </div>
   </div>
